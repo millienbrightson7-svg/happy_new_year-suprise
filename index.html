@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Surprise Nouvel An 2026 🎉</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(12px);
+        border-radius: 20px;
+        padding: 30px;
+        max-width: 600px;
+        width: 100%;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        text-align: center;
+    }
+
+    h1 {
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    p.subtitle {
+        opacity: 0.85;
+        margin-bottom: 25px;
+    }
+
+    input {
+        width: 100%;
+        padding: 14px;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    button {
+        background: #ffd369;
+        color: #222;
+        border: none;
+        padding: 14px 25px;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        transform: scale(1.03);
+        background: #ffcc4d;
+    }
+
+    .message {
+        margin-top: 25px;
+        text-align: left;
+        white-space: pre-line;
+        line-height: 1.6;
+        font-size: 16px;
+        animation: fadeIn 0.6s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+        margin-top: 25px;
+        font-size: 12px;
+        opacity: 0.6;
+    }
+</style>
+</head>
+
+<body>
+<div class="card">
+    <h1>🎁 Message secret – Nouvel An 2026</h1>
+    <p class="subtitle">Entre ton nom complet pour découvrir ton message</p>
+
+    <input 
+        type="text" 
+        id="nameInput" 
+        placeholder="Entre ton nom ici..."
+        autocomplete="name"
+    />
+
+    <button onclick="showMessage()">Afficher le message</button>
+
+    <div id="result" class="message"></div>
+
+    <footer>✨ Fait avec respect et bonne intention — 2026 ✨</footer>
+</div>
+
+<script>
+    // Charger le nom sauvegardé
+    window.onload = () => {
+        const savedName = localStorage.getItem("userName");
+        if (savedName) {
+            document.getElementById("nameInput").value = savedName;
+        }
+    };
+
+    function showMessage() {
+        const input = document.getElementById("nameInput");
+        const name = input.value.trim().toLowerCase();
+
+        if (!name) {
+            alert("Veuillez entrer votre nom.");
+            return;
+        }
+
+        localStorage.setItem("userName", name);
+
+        let message = "";
+
+        if (
+            name.includes("jorace") ||
+            name.includes("maxon") ||
+            name.includes("gérald") ||
+            name.includes("gerald") ||
+            name.includes("kenley")
+        ) {
+            message = `🎉 Bonne année les gars ! 🎉
+Je vous souhaite une année pleine de force, de réussite et de bonnes vibes. Que 2026 vous apporte la santé, l’argent, les projets qui avancent et surtout la paix d’esprit. Merci pour les délires, le soutien et la fraternité — on continue plus forts ensemble 💪🏾🔥
+
+Que cette nouvelle année soit remplie d’opportunités, de victoires et de moments mémorables. Respect à vous tous, bonne année ! 🥂`;
+        }
+
+        else if (name.includes("kaisha")) {
+            message = `💖 Bonne et heureuse année, mon amour 💖
+En entrant dans cette nouvelle année, je veux que tu saches à quel point tu comptes pour moi. Tu es ma plus belle pensée, mon plus doux sourire et la raison pour laquelle mes jours ont plus de sens.
+
+Je te souhaite une année remplie de bonheur, de paix et de rêves accomplis. Que chaque instant t’apporte la tendresse que tu mérites, et sache que je serai toujours là pour t’aimer, te soutenir et marcher à tes côtés.
+
+Merci d’être toi, merci pour ton amour, ta douceur et ta présence. Que cette nouvelle année nous rapproche encore plus et écrive de magnifiques pages de notre histoire. 💕
+Bonne année, mon cœur, je t’aime.`;
+        }
+
+        else if (name.includes("elodie") || name.includes("julien")) {
+            message = `✨ Bonne et heureuse année, ma meilleure amie ! ✨
+Que cette nouvelle année t’apporte tout ce que ton cœur mérite : la paix, la santé, le succès et surtout beaucoup de bonheur. Merci d’être cette personne incroyable, toujours présente, toujours sincère, toujours lumineuse. Ta présence rend mes journées plus belles et mes sourires plus vrais.
+
+Que chaque mois t’offre une nouvelle raison de rêver, d’avancer et de croire encore plus en toi. Je te souhaite une année remplie de victoires, de belles surprises et de moments inoubliables. 💫
+Reste comme tu es, exceptionnelle. Bonne année à toi, du fond du cœur ❤️`;
+        }
+
+        else if (name.includes("benada")) {
+            message = `🌸 Bonne et heureuse année, maman chérie 🌸
+En ce début de nouvelle année, je veux te dire merci pour tout l’amour que tu me donnes chaque jour. Ton cœur est mon refuge, ta voix mon réconfort, et ton sourire ma plus belle force.
+
+Je te souhaite une année remplie de santé, de paix et de joie. Que Dieu t’accorde encore de longues années de bonheur, entourée d’amour et de sérénité. Tu es une bénédiction dans ma vie, et aucun mot ne suffira jamais pour exprimer à quel point je t’aime et je te respecte.
+
+Que cette nouvelle année t’apporte tout ce que ton cœur désire. Bonne année, maman, avec tout mon amour ❤️✨`;
+        }
+
+        else if (name.includes("nehemie")) {
+            message = `✨ Bonne année 2026 ✨
+En ce début d’année, je voulais prendre un moment pour te souhaiter le meilleur, du fond du cœur. Tu as été une personne forte, généreuse, capable de te sacrifier, et je n’oublierai jamais ce que tu as donné avec sincérité.
+
+Même si aujourd’hui notre relation n’a pas tenu comme on l’aurait espéré, je garde du respect et de la gratitude pour ce que nous avons partagé. Certaines histoires ne durent pas, mais elles laissent quand même une trace précieuse.
+
+Je te souhaite une année 2026 remplie de paix, de lumière, de succès et surtout d’amour — un amour qui te comprendra, te respectera et te rendra heureuse comme tu le mérites. Que la vie t’offre ce que je n’ai pas su te donner.
+Prends soin de toi. Bonne année 🤍`;
+        }
+
+        else {
+            message = `✨ Bonne et heureuse année à vous ! ✨
+Que cette nouvelle année vous apporte la santé, la paix, la réussite et beaucoup de bonheur. Que vos projets se réalisent, que vos efforts portent leurs fruits et que chaque jour soit une nouvelle occasion de sourire et d’avancer.
+
+Merci pour votre amitié, votre soutien et tous les bons moments partagés. J’espère que cette année sera remplie de joie, de belles surprises et de souvenirs inoubliables. 🥂
+Bonne année à vous, avec tout mon respect et mon affection !`;
+        }
+
+        document.getElementById("result").textContent = message;
+    }
+</script>
+</body>
+</html>
